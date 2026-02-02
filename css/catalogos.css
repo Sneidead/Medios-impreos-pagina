@@ -1,0 +1,244 @@
+/* Estilos específicos para catalogos.html */
+.catalog-main {
+  max-width: 1200px;
+  margin: 24px auto 80px;
+  padding: 0 18px;
+}
+
+.catalog-header {
+  position: relative;
+  text-align: left;
+  color: white;
+  padding: 36px 28px;
+  max-width: 1200px;
+  margin: 0 auto 18px;
+  background: linear-gradient(180deg, rgba(248, 44, 180, 0.98), rgba(4,65,130,0.98));
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.catalog-header h2 {
+  font-size: 2.1rem;
+  margin-bottom: 8px;
+}
+
+.catalog-header p {
+  color: rgba(255,255,255,0.95);
+  font-size: 1rem;
+  max-width: 900px;
+  line-height: 1.4;
+}
+
+.volver-btn {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+  transition: background .18s ease, transform .12s ease;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.volver-btn:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-2px);
+}
+
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.catalog-item {
+  background: transparent; /* quitar marco */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: none;
+  transition: transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .18s ease;
+  position: relative;
+  isolation: isolate;
+}
+
+.catalog-item img {
+  width: 100%;
+  height: 420px; /* más grande */
+  object-fit: cover;
+  display: block;
+  transition: transform .28s ease;
+}
+
+/* Ocultar títulos (figcaption) según petición */
+.catalog-item figcaption { display: none !important; }
+
+/* Animación de entrada suave */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.catalog-item {
+  will-change: transform, opacity;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp .7s cubic-bezier(.2,.9,.25,1) forwards;
+}
+
+/* staggered delays para hasta 9 items */
+.catalog-grid .catalog-item:nth-child(1)  { animation-delay: 0ms; }
+.catalog-grid .catalog-item:nth-child(2)  { animation-delay: 80ms; }
+.catalog-grid .catalog-item:nth-child(3)  { animation-delay: 160ms; }
+.catalog-grid .catalog-item:nth-child(4)  { animation-delay: 240ms; }
+.catalog-grid .catalog-item:nth-child(5)  { animation-delay: 320ms; }
+.catalog-grid .catalog-item:nth-child(6)  { animation-delay: 400ms; }
+.catalog-grid .catalog-item:nth-child(7)  { animation-delay: 480ms; }
+.catalog-grid .catalog-item:nth-child(8)  { animation-delay: 560ms; }
+.catalog-grid .catalog-item:nth-child(9)  { animation-delay: 640ms; }
+
+.catalog-item:focus-within,
+.catalog-item:hover {
+  transform: translateY(-6px);
+}
+
+.catalog-item:hover img,
+.catalog-item:focus-within img {
+  transform: scale(1.04);
+}
+
+@media (max-width: 1000px) {
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .catalog-item img { height: 260px; }
+  .catalog-header h2 { font-size: 1.9rem; }
+}
+
+@media (max-width: 560px) {
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+  .catalog-item img { height: 200px; }
+  .catalog-header { padding: 20px; }
+  .volver-btn { position: static; display: inline-block; margin-bottom: 12px; }
+}
+
+/* WhatsApp pill button styles (added to match fucsia->azul theme) */
+.whatsapp-consult {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  height: 54px;
+  padding: 0 14px;
+  border-radius: 34px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg,#ff2d90,#0033cc);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 12px 36px rgba(2,55,168,0.18);
+  z-index: 2200;
+  text-decoration: none;
+  transition: transform .14s ease, box-shadow .18s ease;
+}
+.whatsapp-consult .wa-icon { width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; }
+.whatsapp-consult img { width: 100%; height: 100%; object-fit: contain; display: block; filter: brightness(0) invert(1); }
+.whatsapp-consult .wa-text { line-height: 1; }
+.whatsapp-consult:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 20px 46px rgba(2,55,168,0.22); }
+
+@media (max-width: 560px) {
+  .whatsapp-consult { width: 60px; height: 60px; padding: 0; border-radius: 50%; gap: 0; }
+  .whatsapp-consult .wa-text { display: none; }
+  .whatsapp-consult .wa-icon { width: 60%; height: 60%; }
+}
+
+/* ===================== Alternate modern design (keeps fucsia->azul) ===================== */
+.catalog-style-alt .catalog-header {
+  padding: 42px 32px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--fucsia) 0%, var(--azul) 100%);
+  box-shadow: 0 18px 48px rgba(3,18,60,0.18);
+}
+
+.catalog-style-alt .catalog-header h2 {
+  font-size: 2.4rem;
+  letter-spacing: -0.6px;
+}
+
+.catalog-style-alt .catalog-header p { max-width: 880px; font-size: 1.05rem; }
+
+.catalog-style-alt .catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 18px;
+}
+
+.catalog-style-alt .catalog-item {
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  box-shadow: 0 10px 30px rgba(2,24,84,0.06);
+  transition: transform .28s cubic-bezier(.2,.9,.25,1), box-shadow .22s ease;
+}
+
+.catalog-style-alt .catalog-item img {
+  display: block;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform .36s ease;
+}
+
+/* overlay that appears on hover */
+.catalog-style-alt .catalog-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.45) 100%);
+  opacity: 0;
+  transition: opacity .28s ease;
+  pointer-events: none;
+}
+
+.catalog-style-alt .catalog-item:hover::after { opacity: 1; }
+.catalog-style-alt .catalog-item:hover { transform: translateY(-8px); box-shadow: 0 28px 70px rgba(3,18,60,0.16); }
+.catalog-style-alt .catalog-item:hover img { transform: scale(1.06); }
+
+/* small CTA button overlay */
+.catalog-style-alt .catalog-item .item-cta {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: linear-gradient(90deg, var(--fucsia), var(--azul));
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transform: translateY(6px);
+  opacity: 0;
+  transition: transform .22s ease, opacity .22s ease;
+}
+
+.catalog-style-alt .catalog-item:hover .item-cta { transform: translateY(0); opacity: 1; }
+
+/* Responsive adjustments for alt style */
+@media (max-width: 1000px) {
+  .catalog-style-alt .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+  .catalog-style-alt .catalog-item img { height: 300px; }
+}
+
+@media (max-width: 560px) {
+  .catalog-style-alt .catalog-header { padding: 18px 14px; border-radius: 10px; }
+  .catalog-style-alt .catalog-grid { gap: 12px; }
+  .catalog-style-alt .catalog-item img { height: 220px; }
+}

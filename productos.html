@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto - Medios Impresos</title>
+  <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Security meta tags -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me https://api.whatsapp.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self';">
+</head>
+<body>
+
+<main class="producto-detalle-container">
+  <div class="producto-detalle">
+    <!-- FOTO IZQUIERDA -->
+    <div class="producto-foto hover-float">
+      <button type="button" class="arrow-foto left" data-dir="-1" aria-label="Anterior" title="Anterior">❮</button>
+      <div class="carousel-fotos">
+        <img id="productoImg" src="" alt="Producto">
+        <div class="carousel-indicadores" id="indicadores"></div>
+      </div>
+      <button type="button" class="arrow-foto right" data-dir="1" aria-label="Siguiente" title="Siguiente">❯</button>
+    </div>
+
+    <!-- INFO DERECHA -->
+    <div class="producto-info">
+      <h2 id="productoNombre"></h2>
+      
+      <div class="producto-descripcion">
+        <h3>Descripción</h3>
+        <p id="productoDescripcion" class="producto-desc-text" aria-expanded="false"></p>
+        <button id="desc-toggle" class="ver-mas-btn small" type="button">Ver más</button>
+      </div>
+
+      <div class="producto-caracteristicas">
+        <h3>Características</h3>
+        <div class="producto-caracteristicas-inner">
+          <ul id="productoDesc" aria-label="Lista de características"></ul>
+        </div>
+      </div>
+
+      <div class="producto-acciones">
+        <button class="btn-whatsapp" type="button">💬 Consultar por WhatsApp</button>
+      </div>
+  
+      <a href="index.html" class="btn-volver">← Volver a productos</a>
+    </div>
+  </div>
+</main>
+<a href="https://wa.me/573183061147?text=Hola%20👋%20Quiero%20más%20información"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp" loading="lazy" width="48" height="48">
+</a>
+
+
+<!-- COPYRIGHT -->
+<footer style="text-align:center; padding:18px 0; color:#777; font-size:14px;">
+  © Medios Impresos S.A.S
+</footer>
+
+<!-- Lightbox markup -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="Imagen ampliada">
+</div>
+
+<script src="js/script.js" defer></script>
+<script src="js/producto-detail.js" defer></script>
+</body>
+</html>
