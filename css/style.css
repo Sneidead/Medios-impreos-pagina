@@ -495,7 +495,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -140px;
   overflow: hidden;
   padding-top: 40px;
-  background-image: url('../img/fondonatural.jpg'), url('../img/Fondocaña.jpg');
+  background-image: url('../img/Fondonatural.jpg'), url('../img/Fondocana.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -515,6 +515,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background: url('../img/Fondonatural.jpg') center/cover no-repeat;
 }
 
 .hero-text-overlay {
@@ -1430,6 +1431,20 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.8;
   margin-bottom: 20px;
   text-align: justify;
+}
+
+.nosotros-text .nosotros-list {
+  margin: 10px 0 20px 20px;
+  color: #666;
+  line-height: 1.8;
+}
+
+.nosotros-text .nosotros-list li {
+  margin-bottom: 10px;
+}
+
+.nosotros-text .nosotros-list strong {
+  color: var(--teal-dark);
 }
 
 .nosotros-image {
