@@ -3,7 +3,7 @@
 // 🔹 Contactar por WhatsApp
 function contactarWhatsApp() {
   const mensaje = "Hola! Me gustaría conocer más sobre sus productos. 😊";
-  const telefono = "573245333747";
+  const telefono = "573183061147";
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
 }
@@ -170,7 +170,7 @@ if (document.readyState === 'loading') {
     lines.push(`(Enviado desde el formulario del sitio)`);
 
     const text = lines.join('\n');
-    const phoneNumber = '573245333747'; // número destino WhatsApp
+    const phoneNumber = '573183061147'; // número destino WhatsApp
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
 
     // Open WhatsApp (web or app)

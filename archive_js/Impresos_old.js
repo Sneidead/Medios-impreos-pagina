@@ -20,7 +20,7 @@ function abrirModal(titulo, imagen, precio, descripcion) {
 
   const btnWhatsApp = document.getElementById("btnWhatsApp");
   const mensaje = `Hola, estoy interesado en el producto: ${titulo} (${precio})`;
-  btnWhatsApp.href = `https://wa.me/573245333747?text=${encodeURIComponent(mensaje)}`;
+  btnWhatsApp.href = `https://wa.me/573183061147?text=${encodeURIComponent(mensaje)}`;
 
   document.getElementById("modal").style.display = "flex";
 }
