@@ -695,6 +695,13 @@ h1, h2, h3, h4, h5, h6 {
   animation: logoPulse 2400ms ease-in-out 400ms 2 both;
 }
 
+@media (min-width: 1024px) {
+  .logo-hero {
+    width: 300px;
+    margin-top: 18px;
+  }
+}
+
 @media (max-width: 900px) {
   .hero {
     height: 100vh;
@@ -1094,6 +1101,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 44px;
     padding: 6px;
     box-shadow: 0 10px 30px rgba(2,8,20,0.18);
+    top: 42%;
   }
 
   .arrow-foto.left {
@@ -1400,6 +1408,10 @@ h1, h2, h3, h4, h5, h6 {
     right: 8px;
     width: 44px;
     height: 44px;
+  }
+
+  .arrow-foto {
+    top: 40%;
   }
 }
 
