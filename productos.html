@@ -17,21 +17,32 @@
 <body>
 
 <main class="producto-detalle-container">
+  <header class="producto-header">
+    <div class="producto-header-text">
+      <h1>Detalle del producto</h1>
+      <p>Materiales, acabados y características pensadas para tu marca.</p>
+    </div>
+  </header>
+
   <div class="producto-detalle">
+    <div class="breadcrumb-row">
+      <a href="index.html" class="breadcrumb">← Volver a productos</a>
+    </div>
     <!-- FOTO IZQUIERDA -->
-    <div class="producto-foto hover-float">
-      <button type="button" class="arrow-foto left" data-dir="-1" aria-label="Anterior" title="Anterior">❮</button>
-      <div class="carousel-fotos">
-        <img id="productoImg" src="" alt="Producto">
-        <div class="carousel-indicadores" id="indicadores"></div>
+    <div class="producto-media">
+      <h2 id="productoNombre" class="producto-title"></h2>
+      <div class="producto-foto hover-float">
+        <button type="button" class="arrow-foto left" data-dir="-1" aria-label="Anterior" title="Anterior">❮</button>
+        <div class="carousel-fotos">
+          <img id="productoImg" src="" alt="Producto">
+          <div class="carousel-indicadores" id="indicadores"></div>
+        </div>
+        <button type="button" class="arrow-foto right" data-dir="1" aria-label="Siguiente" title="Siguiente">❯</button>
       </div>
-      <button type="button" class="arrow-foto right" data-dir="1" aria-label="Siguiente" title="Siguiente">❯</button>
     </div>
 
     <!-- INFO DERECHA -->
     <div class="producto-info">
-      <h2 id="productoNombre"></h2>
-      
       <div class="producto-descripcion">
         <h3>Descripción</h3>
         <p id="productoDescripcion" class="producto-desc-text" aria-expanded="false"></p>
@@ -49,7 +60,6 @@
         <button class="btn-whatsapp" type="button">💬 Consultar por WhatsApp</button>
       </div>
   
-      <a href="index.html" class="btn-volver">← Volver a productos</a>
     </div>
   </div>
 </main>
