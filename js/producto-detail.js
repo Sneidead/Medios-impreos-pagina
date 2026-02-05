@@ -6,19 +6,19 @@ const productos = {
     nombre: 'Bio-Origing Pack',
     imagenes: ['img/bolsas2.jpeg', 'img/bolsas3.jpeg', 'img/bolsas4.jpeg', 'img/bolsas5.jpeg', 'img/bolsas6.jpeg', 'img/bolsas7.jpeg', 'img/bolsas1.jpeg'],
     descripcion: 'Materiales: Kraft natural, Bagazo de caña y Bond de alta resistencia.;Barrera Pro: Interior trilaminado (metalizado) contra luz, oxígeno y humedad.;Sellado: Compatibles con termosellado para máxima seguridad.;Impresión a 1 Tinta (Minimalista/Económica).;Impresión Full Color (Impacto total).;Opcional Premium: Adición de Peel Stick (re-sellable) para abrir y cerrar el empaque múltiples veces (costo adicional).;Perfil: 100% ecológicas, ideales para tostadores y emprendimientos.',
-    descripcion_larga: ''
+    descripcion_larga: 'Bolsas de alto rendimiento diseñadas para preservar el aroma y frescura de cafés de especialidad. Combinamos la estética orgánica de materiales sostenibles con tecnología de barrera industrial para garantizar un producto impecable desde el tostado hasta la taza.'
   },
   2: {
     nombre: 'Cajas Plegadizas Packaging',
     imagenes: [ 'img/cajaabigail1.jpeg','img/cajaabigail2.jpeg','img/cajaabigail3.jpeg','img/cajaabigail4.jpeg'],
     descripcion: 'Materiales a la Medida;Cajas en Maule de distintos calibres para máxima protección.;Línea Bio-Sostenible: Opciones en Ibema (fibras maderables naturales) y EarthPact (100% fibra de bagazo de caña). Ecología real y certificada.;Impresión y Acabados;Impresión de alta fidelidad desde 1 tinta hasta Full Color.;Terminados de lujo para diferenciarte: Estampados metalizados, brillos UV sectorizados y plastificados.',
-    descripcion_larga: ''
+    descripcion_larga: 'Ingeniería que Protege y Vende desarrollamos estructuras personalizadas de alta resistencia diseñadas para destacar tu producto en el mercado. Combinamos funcionalidad logística con estética premium'
   },
   3: {
     nombre: 'Bolsas De Alto Calibre',
     imagenes: ['img/BOLSASDEALTOCALIBRE2.jpeg','img/BOLSASDEALTOCALIBRE3.jpeg','img/BOLSASDEALTOCALIBRE4.jpeg','img/BOLSASDEALTOCALIBRE5.jpeg','img/BOLSASDEALTOCALIBRE1.jpeg'],
     descripcion: 'Materiales a tu Medida: Elige Cote resistente (gramaje adaptable) o Ibema ecológico (biodegradable y fuerte).;Acabados Personalizados: Tú decides el estilo: cinta o cordón.;Impresión de Alta Fidelidad: Desde una tinta hasta Full Color vibrante.;Toque Premium: Estampados metalizados, brillos UV sectorizados y plastificados (mate o brillante) para diferenciarte.',
-    descripcion_larga: ''
+    descripcion_larga: 'Tus productos merecen una presentación impecable. Fabricamos bolsas personalizadas de alto impacto, diseñadas para resistir y destacar. Ya sea en Cote de gran durabilidad o en Ibema (100% natural y biodegradable), garantizamos la resistencia que tu marca necesita.'
   },
   // CAJAS
   4: {
@@ -29,15 +29,15 @@ const productos = {
   },
   5: {
     nombre: 'Eco-Corp',
-    imagenes: ['img/vaso1.jpeg', 'img/vaso2.jpeg','img/vaso3.jpeg','img/vaso4.jpeg'],
+    imagenes: ['img/vaso4.jpeg', 'img/vaso2.jpeg','img/vaso3.jpeg','img/vaso1.jpeg'],
     descripcion: 'Material: Bagazo de caña de azúcar (100% biodegradable y compostable).;Capacidades (Vasos): 4oz, 7oz, 9oz, 12oz y 16oz.;Variedad: Incluye Bowls y Contenedores para alimentos.;Resistencia Térmica: Aptos para bebidas y alimentos fríos y calientes.;;Personalización: Tampografía de alta calidad: Logo a 1 tinta directamente en el producto.;Fajillas Premium: Opción a full color para marcas que buscan máximo impacto visual.',
-    descripcion_larga: ''
+    descripcion_larga: 'Nuestra línea de empaques biodegradables es la solución definitiva para marcas conscientes que no comprometen la calidad. Diseñados específicamente para el sector gastronómico y emprendimientos modernos, estos recipientes ofrecen una alternativa ecológica superior al plástico convencional. Gracias a su versatilidad térmica, son el aliado perfecto para servir desde un espresso intenso hasta un bowl refrescante, garantizando siempre una experiencia premium para el consumidor final.'
   },
   6: {
     nombre: 'PREMIER PACK',
     imagenes: ['img/cajamx1.jpeg','img/cajamx2.jpeg','img/cajamx5.jpeg','img/cajamx4.jpeg'],
     descripcion: 'Material: Cartón rígido de alta resistencia (No se dobla);Cierre: Tapa con imanes ocultos para un ajuste perfecto;Impresión: Full Color (4x4) por fuera y por dentro con calidad fotográfica.;Medidas: Fabricación 100% a la medida de tu producto.;Acabados Especiales Estampados en Dorado, Plateado, etc, para resaltar tu marca.;Texturas: Opciones de plastificado Mate (elegante) o Brillante (llamativo).',
-    descripcion_larga: ''
+    descripcion_larga: 'Empaques de lujo con estructura sólida y tapa dura. Su sistema de cierre magnético (imantado) brinda seguridad y elegancia inmediata. Son la opción perfecta para kits de regalo, productos exclusivos y presentaciones corporativas donde la imagen lo es todo.'
   },
   7: {
     nombre: 'Caja Arboreo',
@@ -164,7 +164,7 @@ function consultarWhatsAppProducto() {
   const pagina = window.location.href;
   const mensaje = `Hola! Me interesa este producto:\n\n📦 ${nombre}\nID: ${id}\n\nResumen: ${shortDesc}\n\nDetalles: ${fullDesc}\n\nVer: ${pagina}`;
   // Use the provided WhatsApp contact number
-  const telefono = "3245333747";
+  const telefono = "3183061147";
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
 }
@@ -227,15 +227,22 @@ function cerrarLightbox() {
   if (lightbox) lightbox.classList.remove('active');
 }
 
-// Dropdown del botón Catálogo - accesibilidad y comportamiento simple
-(function(){
-  document.addEventListener('DOMContentLoaded', function() {
+// DOM ready logic
+window.addEventListener('DOMContentLoaded', function(){
+  // Dropdown del botón Catálogo - accesibilidad y comportamiento simple
+  (function(){
     const menuBtn = document.getElementById('menuBtn');
     const dropdown = document.getElementById('catalogDropdown');
-
     if (!menuBtn || !dropdown) return;
 
-    menuBtn.addEventListener('click', function(e) {
+    function closeDropdown(){
+      menuBtn.classList.remove('active');
+      dropdown.classList.remove('active');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      dropdown.setAttribute('aria-hidden', 'true');
+    }
+
+    menuBtn.addEventListener('click', function() {
       const active = menuBtn.classList.toggle('active');
       dropdown.classList.toggle('active', active);
       menuBtn.setAttribute('aria-expanded', active ? 'true' : 'false');
@@ -244,28 +251,15 @@ function cerrarLightbox() {
 
     // Cerrar al hacer clic fuera
     document.addEventListener('click', function(e) {
-      if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) {
-        menuBtn.classList.remove('active');
-        dropdown.classList.remove('active');
-        menuBtn.setAttribute('aria-expanded', 'false');
-        dropdown.setAttribute('aria-hidden', 'true');
-      }
+      if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) closeDropdown();
     });
 
     // Cerrar con Escape
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        menuBtn.classList.remove('active');
-        dropdown.classList.remove('active');
-        menuBtn.setAttribute('aria-expanded', 'false');
-        dropdown.setAttribute('aria-hidden', 'true');
-      }
+      if (e.key === 'Escape') closeDropdown();
     });
-  });
-})();
+  })();
 
-// DOM ready logic
-window.addEventListener('DOMContentLoaded', function(){
   // load product
   cargarProducto();
 
@@ -330,54 +324,82 @@ window.addEventListener('DOMContentLoaded', function(){
     if (e.key === 'ArrowRight') if (document.getElementById('productoImg')) cambiarFoto(1);
   });
 
-  // Click-to-view for description: toggle preview/full text when user clicks or presses Enter/Space
+  // Descripción: toggle preview/full text (click en texto o botón "Ver más")
   (function(){
     const descBox = document.getElementById('productoDescripcion');
     if (!descBox) return;
+
+    const full = (descBox.dataset.full || '').trim();
+    if (!full) {
+      const toggleBtn = document.getElementById('desc-toggle');
+      if (toggleBtn) toggleBtn.style.display = 'none';
+      return;
+    }
+
+    function buildPreview(text){
+      let preview = (text.split('. ')[0] || text).trim();
+      if (preview.length < 40 && text.length > preview.length) {
+        preview = text.slice(0, 140) + (text.length > 140 ? '...' : '');
+      } else if (text.length > preview.length) {
+        preview = preview + '...';
+      }
+      return preview;
+    }
+
+    const preview = buildPreview(full);
+    const hasMore = full.length > preview.length;
+
     const hint = document.createElement('div');
     hint.className = 'desc-hint';
-    hint.textContent = 'Haz click para ver más';
-    hint.style.display = 'none';
-    // insert hint after descBox
+    hint.textContent = 'Haz clic para ver más';
+    hint.style.display = hasMore ? '' : 'none';
     descBox.parentNode.insertBefore(hint, descBox.nextSibling);
 
-    function openDesc() {
-      const full = descBox.dataset.full || '';
-      if (!full) return;
-      descBox.classList.add('open');
-      descBox.textContent = full;
-      descBox.setAttribute('aria-expanded', 'true');
-      hint.style.display = 'none';
+    const toggleBtn = document.getElementById('desc-toggle');
+    if (toggleBtn && !toggleBtn.getAttribute('type')) toggleBtn.setAttribute('type','button');
+
+    // Make description focusable for keyboard toggle
+    if (hasMore && descBox.tabIndex < 0) descBox.tabIndex = 0;
+
+    function setExpanded(expanded){
+      descBox.classList.toggle('open', expanded);
+      descBox.textContent = expanded ? full : preview;
+      descBox.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      hint.style.display = (!expanded && hasMore) ? '' : 'none';
+
+      if (toggleBtn) {
+        toggleBtn.style.display = hasMore ? '' : 'none';
+        toggleBtn.textContent = expanded ? 'Ver menos' : 'Ver más';
+        toggleBtn.setAttribute('aria-controls', 'productoDescripcion');
+        toggleBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      }
     }
 
-    function closeDesc() {
-      const full = descBox.dataset.full || '';
-      let preview = full.split('. ')[0] || full;
-      if (preview.length < 40 && full.length > preview.length) preview = full.slice(0,140) + (full.length > 140 ? '...' : '');
-      else if (full.length > preview.length) preview = preview + (full.length > preview.length ? '...' : '');
-      descBox.classList.remove('open');
-      descBox.textContent = preview;
-      descBox.setAttribute('aria-expanded', 'false');
-      // show hint only if there's more to read
-      hint.style.display = (full && full.length > preview.length) ? '' : 'none';
+    function toggle(){
+      const isExpanded = descBox.getAttribute('aria-expanded') === 'true';
+      setExpanded(!isExpanded);
     }
 
-    // initialize hint visibility
-    const initialFull = descBox.dataset.full || '';
-    const initialPreview = descBox.textContent || '';
-    if (initialFull && initialFull.length > initialPreview.length) hint.style.display = '';
+    // Init: ensure consistent state + button visibility
+    setExpanded(false);
 
-    let expanded = false;
     descBox.addEventListener('click', function(){
-      expanded = !expanded;
-      if (expanded) openDesc(); else closeDesc();
+      if (hasMore) toggle();
     });
+
     descBox.addEventListener('keydown', function(e){
+      if (!hasMore) return;
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        expanded = !expanded;
-        if (expanded) openDesc(); else closeDesc();
+        toggle();
       }
     });
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        if (hasMore) toggle();
+      });
+    }
   })();
 });
