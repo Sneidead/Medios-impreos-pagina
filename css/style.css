@@ -24,35 +24,6 @@
   --teal-dark: #1a5a4f;
 }
 
-/* ===================== THEME OVERRIDES: fucsia -> azul ===================== */
-/* Use CSS variables to ensure consistent fucsia->azul gradients across components */
-.site-header,
-.catalog-header,
-.catalog-header .btn-primary,
-.destacados .catalogo-btn,
-.volver-btn {
-  background: linear-gradient(90deg, var(--fucsia), var(--azul)) !important;
-  color: #fff !important;
-}
-
-.destacados .catalogo-btn {
-  box-shadow: 0 18px 50px rgba(0,51,204,0.14) !important;
-  border-radius: 34px !important;
-}
-
-.destacados .catalogo-btn .bars span {
-  background: #ffffff !important;
-}
-
-.whatsapp-consult {
-  background: linear-gradient(90deg, var(--fucsia), var(--azul)) !important;
-}
-
-/* small tweak for any remaining direct-blue uses */
-a[href*="catalogos.html"].catalogo-btn {
-  background: linear-gradient(90deg, var(--fucsia), var(--azul)) !important;
-}
-
 /* ===================== KEYFRAMES ===================== */
 @keyframes popIn {
   0% { opacity: 0; transform: translateY(8px) scale(.99); }
@@ -328,17 +299,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-    width: 360px;
-    max-height: 230px;
-  transform: scale(1.14) rotate(-3deg);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
 
 .nav-item {
   color: var(--blanco);
